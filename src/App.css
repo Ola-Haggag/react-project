@@ -1,38 +1,512 @@
+body{
+  background-image: url(../src/main.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  position: relative;
+  height: 3000px;
+}
+.twoparts{
+ align-items: center;
+ height: 640px;
+}
+.img2{
+  height: 400px;
+  width: 400px;
+ animation: UpAndDown 4s infinite; 
+}
+@keyframes UpAndDown {
+  0%, 100%{ transform: translatey(0);}
+  50%{transform: translateY(60px);}
+}
+.home-section{
+  color: white;
+  text-align: left;
+}
+.upperPart{
+  margin-top: 200px;
+}
+.goConnectContact {
+  display: flex; 
+  align-items: center; 
+}
+.welcome{
+  border: 1px solid blue;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  display: inline-block; 
+}
+.name{
+  font-size: 40px;
+}
 .App {
-  text-align: center;
+ text-align: center;
+ background-color: rgb(29, 86, 218);
+ height: 70px ;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top:10px;
+  width: 60%;
+  color: white;
+  float: right;
+}
+.App-logo{
+height: 70px;
+width: 70px;
+border-radius: 50%;
+margin-left: -300px;
+}
+/*/////////////////////////////////////////////*/
+.connectbtn {
+  position: relative;
+  overflow: hidden;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  height: 40px;
+  width: 130px;
+  transition: color 0.5s;
+}
+
+.connectbtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: left 0.5s;
+}
+
+.connectbtn:hover::before {
+  left: 0;
+}
+.connectbtn:hover {
+  color: black;
+  z-index: 2;
+}
+.connectword {
+  position: relative;
+  z-index: 1; 
+}
+.goConnect{
+   margin-top: 200px;
+}
+.goConnect a {
+  text-decoration: none;
+}
+/*//////////////////////////////////////////////*/
+.iconmedia {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 1px solid rgb(14, 2, 63);
+}
+.iconmedia:hover {
+  background-color: white;
+}
+.iconmedia:hover  .iconitself{
+  color: black;
+}
+.iconitself {
+  height: 25px;
+  width: 25px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+/*//////////////////////////////////////////////////////////////*/
+.skills-section{
+  height: 400px;
+  width: 1000px;
+  border-radius: 30px;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  margin: auto;
+  overflow: hidden;
+  
+}
+.circle{
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  gap: 90px;
+  padding: 80px;
+}
+.circle .progressc{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: white;
+  background: #444 linear-gradient(to right , transparent 
+  30% , var(--clr) 0);
+}
+.circle .progressc h3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 30px;
+  z-index: 1;
+  font-weight: 500;
+}
+.circle .progressc h3 span{
+  font-size: 20px;
+  font-weight: 400;
+}
+.circle .progressc h4{
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translatex(-50%);
+  z-index: 1;
+  font-weight: 400;
+  color: var(--clr);
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.circle .progressc::before{
+  content: '';
+  display: block;
+  height: 100%;
+  margin-left:50% ;
+  transform-origin:left ;
+  border-radius: 0 100% 100% 0;
+}
+.circle .progressc::after{
+  content: '';
+  position: absolute;
+   inset: 10px;
+   border-radius: 50%;
+   background: #222;
+}
+
+
+
+/*/////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////////////////////////////////*/
+
+
+.project-section{
+  background-color: black;
+  color: white;
+
+}
+.sections{
+  height: 50px;
+  width: 800px;
+  border-radius: 40px;
+  background: none;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin: auto;
+  border: 1px solid white;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.line {
+  height: 50px;
+  width: 1px;
+  background-color: white;
+}
+
+/*//////////////*/
+
+.container-section1{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-column-gap: 20px; 
+}
+.imagesec {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; 
+  height: 100%;
+
+}
+.secimg{
+ position: relative;
+}
+.overlayimage{
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.2);
+    visibility: hidden;
+    opacity: 0; 
+}
+.secimg:hover .overlayimage{
+  visibility: visible;
+  opacity: 1; 
+  z-index: 0;
+}
+.secimg:after{
+  position: absolute;
+  content:"";
+  width: 100%;
+  height: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+}
+.secimg:hover::after{
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.overlayContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 5px;
+  font-style: italic;
+
+}
+
+.business {
+  display: block; 
+}
+
+.overlayContent h5 {
+  display: block; 
+  margin-top: 5px; 
+}
+
+/*//////////////////////////*/
+.getintouch{
+  color: white;
+  background: rgb(223,70,173);
+ background: linear-gradient(90deg, rgba(223,70,173,1) 0%,
+ rgba(160,65,180,1) 35%, rgba(118,0,255,1) 100%);
+ height: 600px;
+ position: relative;
+}
+.inputs{
+  background: none;
+  border: 1px solid white;
+  border-radius: 12px;
+  height: 50px;
+  width: 35%;
+  margin-bottom: 15px;
+  margin-right: 12px;
+  padding: 10px;
+}
+::placeholder {
   color: white;
 }
+.message{
+  width: 72%;
+  height: 180px;
 
-.App-link {
-  color: #61dafb;
+}
+.titletouch{
+  text-align: left;
+  margin-left: 100px;
+  margin-bottom: 30px;
+  font-weight: bolder; 
+}
+.sendbtn{
+ float: left;
+ margin-left: 100px;
+ height: 50px;
+ width: 150px;
+ border: 0;
+ font-weight: bold;
+}
+.inputs:focus{
+  background-color: white;
+  color: black;
+
+}
+.inputs:focus::placeholder {
+  color: black;
+}
+.intouch {
+  height: 350px;
+  width: 350px;
+
+}
+/*////////////////////////////////////////////////////////////*/
+.email {
+  background-color: white;
+  color: #222;
+  width: 80%;
+  margin: auto;
+  height: 250px;
+  border-radius: 40px;
+  text-align: left;
+  padding: 80px;
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  right: 0%;
+}
+.email h3{
+  display: inline;
+}
+.btn{
+  background: linear-gradient(90deg, rgba(223,70,173,1) 0%,
+  rgba(160,65,180,1) 35%, rgba(118,0,255,1) 100%);
+  color: white;
+  width: 100px;
+  height: 50px;
+}
+.inemail{
+width: 300px;
+height: 50px;
+}
+/*///////////////////////////////////////////////////////////////////////////*/
+.Footer {
+  background-color: #222;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.iconmediafooter {
+  border: 1px solid white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.App-footer {
+  display: grid;
+  grid-template-rows: repeat(2,50px);
+  color: white;
+  float: right;
+}
+.social-media-icons {
+  display: flex;
+  flex-direction: row; 
+ margin-left:340px;
+}
+.copyright-container {
+   height: 50px;
+}
+.footer-content {
+  margin-top: auto;
+}
+.App-logofooter{
+background-color: red;
+height: 100px;
+width: 100px;
+border-radius: 50%;
+float: left;
+margin-left: 150px;
+}
+
+ .responsive{
+  display: none;
+}
+/*///////////////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 768px) {
+  .App-header {
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(106, 142, 227);
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 250px;
+    right: 0;
+    padding-top: 10px;
+    z-index: 10;
   }
-  to {
-    transform: rotate(360deg);
+
+  .responsive {
+    display: block;
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+
+  .responsive:hover {
+   cursor: pointer;
+  }
+
+  .responsive:focus + .App-header {
+    display: flex;
+    float: right;
+  }
+
+  .App-header a {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  .iconmedia {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center; /* Add this line */
+
+  
+  }
+  .connectbtn {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid blue;
+  }
+
+.home-section{
+  position: absolute;
+  top: -90px;
+  bottom: 0px;
+}
+.imganimated{
+  margin-bottom: -300px;
+}
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .intouch {
+    height: 320px;
+    width: 350px;
+    margin-top: -50px;
+    margin-bottom: 20px;
+  }
+  .email{
+    margin-top: 70px;
+    padding: 40px;  }
+
+  .Footer{
+  }
+  .getintouch{
+    color: white;
+   background: linear-gradient(90deg, rgba(223,70,173,1) 0%,
+   rgba(160,65,180,1) 35%, rgba(118,0,255,1) 100%);
+   height: 1000px;
   }
 }
